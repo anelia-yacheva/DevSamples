@@ -1,0 +1,19 @@
+#ErrorDocument 404 http://example.com/404/
+#ErrorDocument 500 http://example.com/500/
+# or map them to one error document:
+# ErrorDocument 404 /pages/errors/error_redirect.php
+# ErrorDocument 500 /pages/errors/error_redirect.php
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ http://localhost/MyScripts/crypto-currency/$1 [R=301,L]
+RewriteEngine Off
+
+RewriteOptions inherit
+AddDefaultCharset UTF-8
+DirectoryIndex dashboard.php
+
+RewriteEngine on
+RewriteRule ^([0-9a-zA-Z\_\-]+)$ $1.php
+RewriteRule ^([0-9a-zA-Z\_\-]+)/([0-9a-zA-Z\_\-]+)$ $1.php?url=$2
+RewriteRule ^([0-9a-zA-Z\_\-]+)=([0-9a-zA-Z\_\-]+)$ $1.php?cryptocurrency=$2
+RewriteRule ^([0-9a-zA-Z\_\-]+)/page=([0-9a-zA-Z\_\-]+)$ $1.php?page=$2
