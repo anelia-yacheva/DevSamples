@@ -562,6 +562,11 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 </div>
 <script src="js/endlessRiver.js"></script>
+<!-- =====================================================================
+//              SCROLL BETWEEN TWO SCTIONS
+// FIRST SECTION -> <div class="jumbotron text-center section-class-name" data-section-name="home">
+// II SECTION -> <div id="contact" class="container-fluid bg-grey section-class-name" data-section-name="contact">
+// ===================================================================== -->
 <script src="jquery.scrollify.js"></script>
 <script>
     $(function() {
@@ -570,8 +575,11 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
             sectionName : "contact"
         });
     });
-    updateCurrency();
 
+// https://github.com/lukehaas/Scrollify
+// ============================================================================
+
+    updateCurrency();
     function updateCurrency() {
         $.ajax({
             url: "currency.php",
@@ -594,62 +602,6 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
         })
     }
 
-    //------------------------------------ Template JS ---------------------------------------
-    $(document).ready(function () {
-
-        // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 900, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-            } // End if
-        });
-
-        $(window).scroll(function () {
-
-           /* var offset = $("#portfolio").offset();
-            var y;
-
-            if (typeof offset === 'undefined') {
-                y = 0;
-            } else {
-                y = offset.top;
-            }
-            if (this.hash != "#portfolio"){
-             //   event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: y //$(hash).offset().top
-                }, 900, function () {
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = "#about";
-                });
-
-            }
-*/
-            $(".slideanim").each(function () {
-                var pos = $(this).offset().top;
-
-                var winTop = $(window).scrollTop();
-                if (pos < winTop + 600) {
-                    $(this).addClass("slide");
-                }
-            });
-        });
-    })
 </script>
 
 </body>
