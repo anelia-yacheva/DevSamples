@@ -562,6 +562,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 </div>
 <script src="js/endlessRiver.js"></script>
+
 <!-- =====================================================================
 //              SCROLL BETWEEN TWO SCTIONS
 // FIRST SECTION -> <div class="jumbotron text-center section-class-name" data-section-name="home">
