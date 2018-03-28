@@ -78,6 +78,7 @@
                     displayDatabaseRecords(limit, offset);
                     }, 500);
 
+                console.log(offset);
                 // displayDatabaseRecords(limit, offset);
 
             }
