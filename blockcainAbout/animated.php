@@ -86,7 +86,7 @@
             </div>
             <div class="back">
                 <div class="card" style="width: 18rem;">
-                    <div class="card-body">
+                    <div class="card-body equalize">
                         <p class="card-text">
                             Благовест е един от създателите на <a href="https://tavex.bg" target="_blank">Tavex Gold & Exchange</a> в България,
                             съучредител на <a href="http://www.btca.bg" target="_blank">Българска Биткойн Асоциация</a> и се занимава активно с
@@ -112,7 +112,7 @@
             </div>
             <div class="back">
                 <div class="card" style="width: 18rem;">
-                    <div class="card-body">
+                    <div class="card-body equalize">
                         <p class="card-text">
                             Благовест е един от създателите на <a href="https://tavex.bg" target="_blank">Tavex Gold & Exchange</a> в България,
                             съучредител на <a href="http://www.btca.bg" target="_blank">Българска Биткойн Асоциация</a> и се занимава активно с
@@ -138,7 +138,7 @@
             </div>
             <div class="back">
                 <div class="card" style="width: 18rem;">
-                    <div class="card-body">
+                    <div class="card-body equalize">
                         <p class="card-text">
                             Лъчезар завършва бакалавърска степен по бизнес мениджмънт и финанси от St. Francis College, New York през 2011 година.
                             Скоро след това започва да работи като анализатор в Business Intelligence отделът на Телерик - един от ИТ лидерите в

@@ -1,0 +1,1851 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&subset=cyrillic');
+
+html, body, header, nav, section, article, aside, footer, div, img, h1, h2, h3, h4, h5, h6, p, a, span, ul, li, table, canvas, output {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header, nav, section, article, aside, footer {
+    display: block;
+}
+
+::selection {
+    color: white;
+    background: #1a67b2;
+}
+
+::selection, ::-moz-selection {
+    color: white;
+    background: #1a67b2;
+}
+
+@keyframes fadein {
+    from {opacity:0;} to {opacity:1;}
+}
+
+@-ms-keyframes fadein {
+    from { opacity:0;} to {opacity:1;}
+}
+
+@-moz-keyframes fadein {
+    from { opacity:0;} to {opacity:1;}
+}
+
+@-webkit-keyframes fadein {
+    from {opacity:0;} to {opacity:1;}
+}
+
+@keyframes move {
+    25% {opacity: 1;}
+    33% {opacity:1; transform:translateY(30px);}
+    67% {opacity:1; transform:translateY(40px);}
+    100% {opacity:0; transform:translateY(55px) scale3d(0.5, 0.5, 0.5);}
+}
+
+@keyframes pulse {
+    to {opacity:1;}
+}
+
+body {
+    background: #f4fafa;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    padding: 0 0 56px 0;
+}
+
+article {
+    float: left;
+    position: relative;
+}
+
+@media screen and (max-width: 5000px) {
+
+    #confirmation {
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        left: 0;
+        overflow: auto;
+        padding: 260px 0 0 0;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .pop-up>div {
+        background: #fcfcfc;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 480px;
+    }
+
+    .pop-up>div>h3 {
+        color: #1a67b2;
+        float: left;
+        font-size: 1.4em;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .pop-up>div>p {
+        color: #4d4d4d;
+        float: left;
+        font-size: 1em;
+        text-align: center;
+        margin: 15px 0 0 0;
+        width: 100%;
+    }
+
+    .pop-up>div>a {
+        border: 1px solid green;
+        border-radius: 4px;
+        color: green;
+        cursor: pointer;
+        float: left;
+        font-size: 0.84em;
+        margin: 30px 0 0 215px;
+        padding: 12px 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .pop-up>div>a:hover {
+        background: green;
+        color: white;
+    }
+
+    header {
+        background: white;
+        box-shadow: 0 1px 5px #e1e1e1;
+        padding: 20px 0;
+        position: relative;
+        top: 0;
+        height: 53px;
+        z-index: 999;
+        width: 100%;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    header>div {
+        margin: auto;
+        width: 960px;
+    }
+
+    header>div>a {
+        float: left;
+        background: url(https://www.blockchain.bg/img/template/logo.png) no-repeat;
+        background-size: 173px 53px;
+        height: 53px;
+        width: 173px;
+    }
+
+    header>div>nav {
+        float: right;
+        position: relative;
+    }
+
+    header>div>nav>ul {
+        float: left;
+        list-style: none;
+    }
+
+    header>div>nav>ul>li {
+        display: inline;
+        float: left;
+        font-size: 1.2em;
+        margin: 13px 0 0 20px;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    header>div>nav>ul>li.join {
+        border: 1px solid #f9b016;
+        border-radius: 6px;
+        cursor: pointer;
+        display: none;
+        font-size: 0.9em;
+        margin: 5px 0 0 20px;
+        padding: 10px 14px 11px 14px;
+    }
+
+    header>div>nav>ul>li.join:hover {
+        background: #f9b016;
+    }
+
+    header>div>nav>ul>li>a {
+        color: #1a67b2;
+        cursor: pointer;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+
+    header>div>nav>ul>li.join>a {
+        color: #f9b016;
+    }
+
+    header>div>nav>ul>li>a:hover {
+        filter: grayscale(100%);
+    }
+
+    header>div>nav>ul>li.join:hover>a {
+        color: white;
+        filter: none;
+    }
+
+    figure {
+        background: url(https://www.blockchain.bg/img/template/1802221354.jpg) #151d2e center fixed no-repeat;
+        background-size: cover;
+        margin: 0;
+        height: 585px;
+        width: 100%;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    figure>h1 {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 3em;
+        font-weight: 900;
+        letter-spacing: 7px;
+        margin: auto;
+        padding: 172px 0 0 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 960px;
+    }
+
+    figure>h4 {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.3em;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: auto;
+        padding: 10px 0 0 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 960px;
+    }
+
+    figure>div {
+        clear: both;
+        margin: auto;
+        padding: 45px 0 90px 0;
+        width: 612px;
+    }
+
+    figure>div>a {
+        background: #ebebeb;
+        border-radius: 8px;
+        color: #f9b016;
+        cursor: pointer;
+        float: left;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        margin: 0 0 0 30px;
+        padding: 14px 16.5px 14px 16px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 132px;
+    }
+
+    figure>div>a:hover {
+        background: #f9b016;
+        color: white;
+    }
+
+    section.bullets {
+        border-bottom: 1px solid #e1e1e1;
+        clear: both;
+        padding: 93px 0 88px 0;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.bullets>h4 {
+        font-size: 1.4em;
+        margin: auto auto 32px auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 800px;
+    }
+
+    section.bullets>ul {
+        list-style: none;
+        margin: auto;
+        width: 620px;
+    }
+
+    section.bullets>ul>li {
+        cursor: pointer;
+        display: inline;
+        float: left;
+        font-size: 1.2em;
+        padding: 25px 10px 25px 80px;
+        width: 210px
+    }
+
+    section.bullets>ul>li:nth-child(even) {
+        float: right;
+        width: 180px
+    }
+
+    section.bullets>ul>li.bullet-one {
+        background: url(https://www.blockchain.bg/img/template/icons/1802231134.png) left 25px center no-repeat;
+        background-size: 38px 48px;
+    }
+
+    section.bullets>ul>li.bullet-two {
+        background: url(https://www.blockchain.bg/img/template/icons/1802231131.png) left 21.5px center no-repeat;
+        background-size: 45px 48px;
+    }
+
+    section.bullets>ul>li.bullet-three {
+        background: url(https://www.blockchain.bg/img/template/icons/1802231135.png) left 27px center no-repeat;
+        background-size: 35px 48px;
+    }
+
+    section.bullets>ul>li.bullet-four {
+        background: url(https://www.blockchain.bg/img/template/icons/1802231133.png) left 22px center no-repeat;
+        background-size: 44px 48px;
+    }
+
+    section.bullets>ul>li.bullet-five {
+        background: url(https://www.blockchain.bg/img/template/icons/1802231132.png) left 20px center no-repeat;
+        background-size: 48px 48px;
+    }
+
+    section.bullets>ul>li.bullet-six {
+        background: url(https://www.blockchain.bg/img/template/icons/1802231136.png) left 20px center no-repeat;
+        background-size: 48px 45px;
+    }
+
+    section.bullets>ul>li:hover {
+        color: #e9ae19;
+    }
+
+    .bullet-active {
+        border: 1px solid #1a67b2;
+        border-bottom: 1px solid #f4fafa;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        color: #e9ae19;
+        position: relative;
+        z-index: 500;
+    }
+
+    section.bullets>ul>div {
+        border: 1px solid #1a67b2;
+        border-radius: 8px;
+        border-top-left-radius: 0;
+        float: left;
+        font-size: 0.9em;
+        margin: -1px 0 30px 0;
+        padding: 20px;
+        position: relative;
+        text-align: justify;
+        width: 578px;
+        z-index: 400;
+    }
+
+    section.bullets>ul>div:nth-child(even) {
+        border-radius: 8px;
+        border-top-right-radius: 0;
+    }
+
+    section.lastnews {
+        background: white;
+        clear: both;
+        padding: 93px 0 100px 0;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.lastnews>h4 {
+        font-size: 1.4em;
+        margin: auto auto 62px auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 800px;
+    }
+
+    section.lastnews>.last {
+        margin: auto;
+        width: 960px;
+    }
+
+    section.lastnews>div>a {
+        float: left;
+        cursor: pointer;
+        min-height: 272px;
+        text-decoration: none;
+    }
+
+    section.lastnews>div>a>img {
+        float: right;
+        width: 480px;
+    }
+
+    section.lastnews>div>a>.content {
+        float: left;
+        padding: 0 50px 0 0;
+        position: relative;
+        min-height: 272px;
+        width: 430px;
+    }
+
+    section.lastnews>div>a>div>h3 {
+        color: #1a67b2;
+        float: left;
+        font-size: 1.3em;
+        margin: 0 0 28px 0;
+    }
+
+    section.lastnews>div>a>div>p {
+        color: #757575;
+        float: left;
+        letter-spacing: 0.4px;
+    }
+
+    section.lastnews>div>a>div>span {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021100.png) left center no-repeat;
+        bottom: 0;
+        color: #34495e;
+        float: left;
+        left: 0;
+        letter-spacing: 0.4px;
+        padding: 0 0 0 19px;
+        position: absolute;
+    }
+
+    section.lastnews>div>a>div>strong {
+        bottom: 0;
+        color: #1a67b2;
+        float: right;
+        letter-spacing: 0.4px;
+        position: absolute;
+        right: 50px;
+    }
+
+    section.fund {
+        margin: auto;
+        padding: 93px 0 100px 0;
+        width: 960px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.fund>h4 {
+        font-size: 1.4em;
+        margin: auto auto 54px auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.fund>.about {
+        background: url(https://www.blockchain.bg/img/template/1803041129.png) top 19px right no-repeat;
+        float: left;
+        font-size: 0.94em;
+        margin: 0 0 16px 0;
+        padding: 0 440px 0 0;
+        width: 520px;
+    }
+
+    section.fund>.security {
+        background: url(https://www.blockchain.bg/img/template/1803041228.png) center left no-repeat;
+        float: left;
+        font-size: 0.94em;
+        margin: 0 0 36px 0;
+        padding: 0 0 0 400px;
+        width: 560px;
+    }
+
+    section.fund>.invest {
+        float: left;
+        font-size: 0.94em;
+        width: 100%;
+    }
+
+    section.fund>div>ul {
+        float: left;
+        list-style: none;
+        width: 100%;
+    }
+
+    section.fund>div>p {
+        float: left;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    section.guide {
+        margin: auto;
+        padding: 93px 0 100px 0;
+        width: 960px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.guide>h4 {
+        font-size: 1.4em;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.guide>article {
+        float: left;
+        margin: 42px 0 0 0;
+        width: 600px;
+    }
+
+    section.guide>article>p {
+        float: left;
+        font-size: 0.94em;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    section.guide>article>.social {
+        float: left;
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 4px solid #d8d8d8;
+        margin-top: 25px;
+        padding: 25px 0;
+        width: 100%;
+    }
+
+    section.guide>article>.social>h3 {
+        color: #d8d8d8;
+        float: left;
+        font-size: 1.4em;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin: 4px 0;
+        text-transform: uppercase;
+    }
+
+    section.guide>article>.social>a {
+        background: #707070;
+        color: white;
+        cursor: pointer;
+        float: left;
+        font-size: 0.84em;
+        margin-left: 30px;
+        padding: 10px 16px 10px 54px;
+        text-decoration: none;
+    }
+
+    section.guide>article>.social>a.facebook {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021125.png) #707070 left center no-repeat;
+    }
+
+    section.guide>article>.social>a:hover.facebook {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021125.png) #395797 left center no-repeat;
+    }
+
+    section.guide>article>.social>a.twitter {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021126.png) #707070 left center no-repeat;
+    }
+
+    section.guide>article>.social>a:hover.twitter {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021126.png) #0f91e0 left center no-repeat;
+    }
+
+    section.guide>article>.social>a.google {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021127.png) #707070 left center no-repeat;
+    }
+
+    section.guide>article>.social>a:hover.google {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021127.png) #c93427 left center no-repeat;
+    }
+
+    section.guide>aside {
+        float: right;
+        margin: 62px 0 0 0;
+        width: 300px;
+    }
+
+    section.guide>aside>form {
+        background: white;
+        box-shadow: 0 1px 5px #e1e1e1;
+        float: left;
+        margin: 0 0 60px 0;
+        padding: 25px;
+        width: 250px;
+    }
+
+    section.guide>aside>form>p {
+        float: left;
+        font-size: 0.86em;
+        letter-spacing: 0.2px;
+        margin: -3px 0 19px 0;
+    }
+
+    article.guide>aside>form>.message {
+        float: right;
+        font-size: 0.84em;
+        margin: 0 0 10px 0;
+        width: 250px;
+        animation: fadein 5s;
+        -ms-animation: fadein 5s;
+        -moz-animation: fadein 5s;
+        -webkit-animation: fadein 5s;
+    }
+
+    article.guide>aside>form>div>.red {
+        background: #f5d3d3;
+        border-left: 3px solid #9f0006;
+        color: #9f0006;
+        float: right;
+        padding: 10px 11px;
+        width: 225px;
+    }
+
+    article.guide>aside>form>div>.blue {
+        background: #d3e5f5;
+        border-left: 3px solid #006d9f;
+        color: #006d9f;
+        float: right;
+        padding: 10px 11px;
+        width: 225px;
+    }
+
+    section.guide>aside>form>input[name="email"] {
+        background: white;
+        border: 0;
+        border-bottom: 1px solid #b7b7b7;
+        color: #34495e;
+        float: left;
+        font-family: Roboto, sans-serif;
+        font-size: 0.9em;
+        letter-spacing: 0.2px;
+        outline: none;
+        padding: 7px 0 3px 0;
+        width: 140px;
+    }
+
+    section.guide>aside>form>input[name="subscribe"] {
+        background: transparent;
+        border: 1px solid #1a67b2;
+        border-radius: 4px;
+        color: #1a67b2;
+        cursor: pointer;
+        float: right;
+        font-size: 0.74em;
+        outline: none;
+        padding: 8px 10px 7px 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    section.guide>aside>form>input[name="subscribe"]:hover {
+        background: #1a67b2;
+        color: white;
+    }
+
+    section.guide>aside>.fb-page {
+        float: left;
+        margin: 0 0 60px 0;
+    }
+
+    section.guide>aside>.articles {
+        float: left;
+        border-left: 1px solid #e0e0e0;
+        margin: 0 0 60px 0;
+    }
+
+    section.guide>aside>.articles>h4 {
+        float: left;
+        margin: 30px 0 0 0;
+        padding: 0 0 0 16px;
+    }
+
+    section.guide>aside>.articles>ul {
+        float: left;
+        list-style: none;
+        padding: 13px 0 0 0;
+        width: 299px;
+    }
+
+    section.guide>aside>.articles>ul>a {
+        float: left;
+        margin: 0 0 16px 0;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    section.guide>aside>.articles>ul>a>h5 {
+        background: url(https://www.prowork.bg/img/template/icons/1711131260.png) left center no-repeat;
+        clear: both;
+        color: #34495e;
+        float: left;
+        font-size: 0.84em;
+        margin: 0 0 0 -3px;
+        padding: 0 0 0 18px;
+    }
+
+    section.guide>aside>.articles>ul>a:hover>h5 {
+        filter: grayscale(100%);
+    }
+
+    section.guide>ul {
+        float: left;
+        font-size: 1.3em;
+        letter-spacing: 0.4px;
+        list-style: none;
+        margin: 62px 60px 0 0;
+        width: 280px;
+    }
+
+    section.guide>ul.general-questions {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021813.png) top left no-repeat;
+        padding: 0 0 3px 39px;
+        width: 241px;
+    }
+
+    section.guide>ul.economic-questions {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021814.png) top left no-repeat;
+        padding: 0 0 3px 45px;
+        width: 235px;
+    }
+
+    section.guide>ul.technical-questions {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021815.png) top left no-repeat;
+        margin: 62px 0 0 0;
+        padding: 0 0 3px 39px;
+        width: 241px;
+    }
+
+    section.guide>ul.legal-questions {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021816.png) top left no-repeat;
+        padding: 0 0 3px 40px;
+        width: 240px;
+    }
+
+    section.guide>ul>h5 {
+        color: #00aeef;
+        margin: 0 0 5px 0;
+        float: left;
+    }
+
+    section.guide>ul>h5>span {
+        float: right;
+        font-size: 0.74em;
+        filter: grayscale(100%);
+        margin: 2px 0 0 5px;
+    }
+
+    section.guide>ul>li {
+        float: left;
+        width: 280px;
+    }
+
+    section.guide>ul.general-questions>li {
+        margin: 5px 0 5px -39px;
+    }
+
+    section.guide>ul.economic-questions>li {
+        margin: 5px 0 5px -45px;
+    }
+
+    section.guide>ul.technical-questions>li {
+        margin: 5px 0 5px -39px;
+    }
+
+    section.guide>ul.legal-questions>li {
+        margin: 5px 0 5px -40px;
+    }
+
+    section.guide>ul>li>a {
+        color: #979797;
+        float: left;
+        font-size: 0.74em;
+        text-decoration: none;
+    }
+
+    section.guide>ul>li>a:hover {
+        color: #cccccc;
+    }
+
+    section.news {
+        margin: auto;
+        padding: 93px 0 100px 0;
+        width: 960px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.news>h4 {
+        font-size: 1.4em;
+        margin: auto auto 62px auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.news>article {
+        float: left;
+        width: 600px;
+    }
+
+    section.news>article>.header {
+        color: #34495e;
+        float: left;
+        margin: -6px 0 0 0;
+        width: 100%;
+    }
+
+    section.news>article>div>span {
+        float: left;
+        font-size: 1.1em;
+        letter-spacing: 0.4px;
+        margin: 0 40px 20px 0;
+    }
+
+    section.news>article>div>span.publish {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021100.png) left center no-repeat;
+        padding: 0 0 0 19px;
+    }
+
+    section.news>article>div>span.author {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021102.png) left center no-repeat;
+        padding: 0 0 0 20px;
+    }
+
+    section.news>article>img {
+        float: left;
+        width: 100%;
+    }
+
+    section.news>article>p {
+        float: left;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    section.news>article>p b strong {
+        font-family: Roboto, sans-serif;
+    }
+
+    section.news>article>p a {
+        color: gray;
+        text-decoration: none;
+    }
+
+    section.news>article>p a:hover {
+        text-decoration: underline;
+    }
+
+    section.news>article>.social {
+        float: left;
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 4px solid #d8d8d8;
+        margin-top: 25px;
+        padding: 25px 0;
+        width: 100%;
+    }
+
+    section.news>article>.social>h3 {
+        color: #d8d8d8;
+        float: left;
+        font-size: 1.4em;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin: 4px 0;
+        text-transform: uppercase;
+    }
+
+    section.news>article>.social>a {
+        background: #707070;
+        color: white;
+        cursor: pointer;
+        float: left;
+        font-size: 0.84em;
+        margin-left: 30px;
+        padding: 10px 16px 10px 54px;
+        text-decoration: none;
+    }
+
+    section.news>article>.social>a.facebook {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021125.png) #707070 left center no-repeat;
+    }
+
+    section.news>article>.social>a:hover.facebook {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021125.png) #395797 left center no-repeat;
+    }
+
+    section.news>article>.social>a.twitter {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021126.png) #707070 left center no-repeat;
+    }
+
+    section.news>article>.social>a:hover.twitter {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021126.png) #0f91e0 left center no-repeat;
+    }
+
+    section.news>article>.social>a.google {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021127.png) #707070 left center no-repeat;
+    }
+
+    section.news>article>.social>a:hover.google {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021127.png) #c93427 left center no-repeat;
+    }
+
+    section.news>aside {
+        float: right;
+        width: 300px;
+    }
+
+    section.news>aside>form {
+        background: white;
+        box-shadow: 0 1px 5px #e1e1e1;
+        float: left;
+        margin: 0 0 60px 0;
+        padding: 25px;
+        width: 250px;
+    }
+
+    article.news>aside>form>.message {
+        background: #f5d3d3;
+        border-left: 3px solid #9f0006;
+        color: #9f0006;
+        float: left;
+        font-size: 0.84em;
+        margin: 0 0 10px 0;
+        padding: 10px 11px;
+        width: 225px;
+        animation: fadein 5s;
+        -ms-animation: fadein 5s;
+        -moz-animation: fadein 5s;
+        -webkit-animation: fadein 5s;
+    }
+
+    section.news>aside>form>p {
+        float: left;
+        font-size: 0.86em;
+        letter-spacing: 0.2px;
+        margin: -3px 0 19px 0;
+    }
+
+    section.news>aside>form>input[name="email"] {
+        background: white;
+        border: 0;
+        border-bottom: 1px solid #b7b7b7;
+        color: #34495e;
+        float: left;
+        font-family: Roboto, sans-serif;
+        font-size: 0.9em;
+        letter-spacing: 0.2px;
+        outline: none;
+        padding: 7px 0 3px 0;
+        width: 140px;
+    }
+
+    section.news>aside>form>input[name="subscribe"] {
+        background: transparent;
+        border: 1px solid #1a67b2;
+        border-radius: 4px;
+        color: #1a67b2;
+        cursor: pointer;
+        float: right;
+        font-size: 0.74em;
+        outline: none;
+        padding: 8px 10px 7px 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    section.news>aside>form>input[name="subscribe"]:hover {
+        background: #1a67b2;
+        color: white;
+    }
+
+    section.news>aside>.fb-page {
+        float: left;
+        margin: 0 0 60px 0;
+    }
+
+    section.news>aside>.news {
+        border-left: 1px solid #e0e0e0;
+        float: left;
+        margin: 0 0 60px 0;
+        padding: 13px 0 0 0;
+        width: 299px;
+    }
+
+    section.news>aside>.news>a {
+        float: left;
+        margin: 0 0 16px 0;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    section.news>aside>.news>a>span {
+        background: url(https://www.prowork.bg/img/template/icons/1711131260.png) left center no-repeat;
+        clear: both;
+        color: #f35343;
+        float: left;
+        font-size: 0.84em;
+        margin: 0 0 0 -3px;
+        padding: 0 0 0 18px;
+    }
+
+    section.news>aside>.news>a>h5 {
+        color: #34495e;
+        float: left;
+        font-size: 0.84em;
+        letter-spacing: 0.5px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 15px;
+    }
+
+    section.news>aside>.news>a:hover>h5 {
+        filter: grayscale(100%);
+    }
+
+    section.news>div.cat {
+        float: left;
+        width: 100%;
+    }
+
+    section.news>div.cat>a {
+        color: #282828;
+        font-family: Arial;
+        font-size: 0.94em;
+        font-style: italic;
+        text-decoration: none;
+    }
+
+    section.news>div.cat>a:hover {
+        color: gray;
+    }
+
+    section.news>div.cat>a.active {
+        color: #1a67b2;
+    }
+
+    section.news>div.cat>span {
+        padding: 0px 12px;
+    }
+
+    section.news>a {
+        background: white;
+        box-shadow: 0 1px 5px #e1e1e1;
+        cursor: pointer;
+        float: right;
+        font-size: 0.9em;
+        margin: 70px 0 0 0;
+        text-decoration: none;
+        width: 440px;
+    }
+
+    section.news>a:nth-child(even) {
+        float: left;
+    }
+
+    section.news>a.cover {
+        float: left;
+        font-size: 1em;
+        margin: 0 0 30px 0;
+        min-height: 272px;
+        width: 100%;
+    }
+
+    section.news>a>img {
+        float: left;
+        width: 100%;
+    }
+
+    section.news>a>.content {
+        float: left;
+        padding: 30px;
+        position: relative;
+        min-height: 212px;
+        width: 380px;
+    }
+
+    section.news>a>div>h3 {
+        color: #1a67b2;
+        float: left;
+        font-size: 1.3em;
+        margin: 0 0 28px 0;
+    }
+
+    section.news>a>div>p {
+        color: #757575;
+        float: left;
+    }
+
+    section.news>a>div>span {
+        background: url(https://www.blockchain.bg/img/template/icons/1803021100.png) left center no-repeat;
+        bottom: 30px;
+        color: #34495e;
+        float: left;
+        left: 30px;
+        letter-spacing: 0.4px;
+        padding: 0 0 0 19px;
+        position: absolute;
+    }
+
+    section.news>a>div>strong {
+        bottom: 30px;
+        color: #1a67b2;
+        float: right;
+        letter-spacing: 0.4px;
+        position: absolute;
+        right: 30px;
+    }
+
+    section.news>a.cover>.content {
+        width: 420px;
+    }
+
+    section.news>a.cover>div>p {
+        letter-spacing: 0.4px;
+    }
+
+    section.news>a.cover>img {
+        float: right;
+        width: 480px;
+    }
+
+    section.news>.pagination {
+        clear: both;
+        float: left;
+        margin: 20px 0 0 0;
+        position: relative;
+        width: 100%;
+    }
+
+    section.news>.pagination>a {
+        float: left;
+        border: 1px solid #1a67b2;
+        border-radius: 8px;
+        color: #1a67b2;
+        cursor: pointer;
+        font-size: 1.24em;
+        margin: 10px 20px 0 0;
+        padding: 15px 20px;
+        text-decoration: none;
+    }
+
+    section.news>.pagination>a:hover {
+        background: #1a67b2;
+        color: white;
+    }
+
+    section.news>.pagination>a.active {
+        background: #bbd0e4;
+        border: 1px solid #1a67b2;
+        color: #1a67b2;
+    }
+
+    section.about {
+        margin: auto;
+        padding: 62px 0;
+        position: relative;
+        width: 960px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.about>.who-are-we {
+        float: left;
+        padding: 18px 0;
+        width: 400px;
+    }
+
+    section.about>.our-aim {
+        float: right;
+        padding: 18px 0;
+        width: 500px;
+    }
+
+    section.about>div>p {
+        float: left;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    section.about>div>p.bold {
+        font-size: 1.28em;
+        font-weight: bold;
+        padding: 15px 0 26.5px 0;
+    }
+
+    section.about>div>p>a {
+        color: #f9b016;
+        text-decoration: none;
+    }
+
+    section.about>div>p>a:hover {
+        text-decoration: underline;
+    }
+
+    section.about>ul.team {
+        clear: both;
+        float: left;
+        list-style: none;
+        margin: 25px 0 103px 0;
+        width: 960px;
+    }
+
+    section.about>ul.team>li {
+        border-top: 15px solid #1a67b2;
+        cursor: pointer;
+        float: left;
+        width: 320px;
+    }
+
+    section.about>ul.team>li:hover {
+        border-top: 15px solid #217dd7;
+    }
+
+    section.about>ul.team>li>img {
+        float: left;
+        width: 100%;
+    }
+
+    section.about>ul.team>li>h3 {
+        background: #1a67b2;
+        color: white;
+        float: left;
+        font-size: 1.43em;
+        font-weight: bold;
+        margin: 0;
+        padding: 26px 0 2px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    section.about>ul.team>li:hover>h3 {
+        background: #217dd7;
+    }
+
+    section.about>ul.team>li>span {
+        background: #1a67b2;
+        color: #ebebeb;
+        float: left;
+        padding: 0 0 26px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    section.about>ul.team>li:hover>span {
+        background: #217dd7;
+    }
+
+    section.about>ul.team>li>div {
+        background: #f4fafa;
+        display: none;
+        float: left;
+        left: 0;
+        padding: 44.5px 0 0 0;
+        position: absolute;
+        top: 50px;
+        height: 255px;
+        width: 960px;
+    }
+
+    section.about>ul.team>li:hover>div {
+        display: block;
+    }
+
+    section.about>ul.team>li>div>h3 {
+        float: left;
+        font-size: 1.32em;
+        font-weight: bold;
+        padding: 0 0 28px 0;
+        width: 100%;
+    }
+
+    section.about>ul.team>li>div>p {
+        float: left;
+    }
+
+    section.about>ul.team>li>div>p>a {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    section.about>ul.team>li>div>p>a:hover {
+        text-decoration: underline;
+    }
+
+    section.contacts {
+        margin: auto;
+        padding: 93px 0 0 0;
+        width: 960px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.contacts>h4 {
+        font-size: 1.4em;
+        margin: auto auto 62px auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 960px;
+    }
+
+    section.contacts>div {
+        float: left;
+        margin: 0 0 50px 0;
+        width: 480px;
+    }
+
+    section.contacts>div>p {
+        float: left;
+        margin: 0 0 30px 0;
+        width: 100%;
+    }
+
+    section.contacts>form {
+        float: right;
+        margin: 0 0 50px 0;
+        width: 380px;
+    }
+
+    section.contacts>form>.message {
+        float: right;
+        font-size: 0.84em;
+        margin: 0 0 15px 0;
+        width: 380px;
+        animation: fadein 5s;
+        -ms-animation: fadein 5s;
+        -moz-animation: fadein 5s;
+        -webkit-animation: fadein 5s;
+    }
+
+    section.contacts>form>.red {
+        background: #f5d3d3;
+        border-left: 3px solid #9f0006;
+        color: #9f0006;
+        float: right;
+        padding: 10px 11px;
+        width: 355px;
+    }
+
+    section.contacts>form>.blue {
+        background: #d3e5f5;
+        border-left: 3px solid #006d9f;
+        color: #006d9f;
+        float: right;
+        padding: 10px 11px;
+        width: 355px;
+    }
+
+    section.contacts>form>input[name="business"] {
+        background: white;
+        border: 0;
+        border-radius: 0.3em;
+        box-shadow: inset 0.5px 0.5px 1px #b7b7b7;
+        color: #34495e;
+        float: left;
+        font-family: Roboto, sans-serif;
+        font-size: 1em;
+        margin: 0 0 30px 0;
+        outline: none;
+        padding: 17px 20px;
+        width: 340px;
+    }
+
+    section.contacts>form>input[name="name"] {
+        background: white;
+        border: 0;
+        border-radius: 0.3em;
+        box-shadow: inset 0.5px 0.5px 1px #b7b7b7;
+        color: #34495e;
+        float: left;
+        font-family: Roboto, sans-serif;
+        font-size: 1em;
+        margin: 0 0 30px 0;
+        outline: none;
+        padding: 17px 20px;
+        width: 340px;
+    }
+
+    section.contacts>form>input[name="email"] {
+        background: white;
+        border: 0;
+        border-radius: 0.3em;
+        box-shadow: inset 0.5px 0.5px 1px #b7b7b7;
+        color: #34495e;
+        float: left;
+        font-family: Roboto, sans-serif;
+        font-size: 1em;
+        margin: 0 0 30px 0;
+        outline: none;
+        padding: 17px 20px;
+        width: 340px;
+    }
+
+    section.contacts>form>textarea {
+        background: white;
+        border: 0;
+        border-radius: 0.3em;
+        box-shadow: inset 0.5px 0.5px 1px #b7b7b7;
+        color: #34495e;
+        float: left;
+        font-family: Roboto, sans-serif;
+        font-size: 1em;
+        margin: 0 0 30px 0;
+        outline: none;
+        padding: 17px 20px;
+        height: 134px;
+        width: 340px;
+    }
+
+    section.contacts>form>input[name="submit"] {
+        background: transparent;
+        border: 1px solid #1a67b2;
+        border-radius: 4px;
+        color: #1a67b2;
+        cursor: pointer;
+        float: right;
+        font-size: 0.84em;
+        outline: none;
+        padding: 12px 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    section.contacts>form>input[name="submit"]:hover {
+        background: #1a67b2;
+        color: white;
+    }
+
+    section.buy-and-sell {
+        margin: auto;
+        padding: 93px 0 100px 0;
+        width: 960px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    section.buy-and-sell>h4 {
+        font-size: 1.4em;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article {
+        clear: both;
+        margin: auto;
+        width: 960px;
+    }
+
+    section.buy-and-sell>article>aside {
+        float: left;
+        width: 320px;
+    }
+
+    section.buy-and-sell>article>aside>h5 {
+        clear: both;
+        color: #1a67b2;
+        float: left;
+        margin: 62px 0 15px 0;
+        padding: 5px 0 7px 0;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article>aside>h5>span {
+        background: #1a67b2;
+        border-radius: 50%;
+        color: #f4fafa;
+        margin: 0 10px 0 0;
+        padding: 5px 13px 7px 13px;
+    }
+
+    section.buy-and-sell>article>aside>a {
+        color: #e0e0e0;
+        float: left;
+        font-size: 1.3em;
+        margin: 0 0 20px 0;
+        padding: 0 0 0 40px;
+        text-decoration: none;
+        width: 120px;
+    }
+
+    section.buy-and-sell>article>aside>a.btc {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031440.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.bch {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031441.png) left center no-repeat;
+        background-size: 33px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.eth {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031442.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.dash {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031443.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.zec {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031444.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.xmr {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031445.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.ltc {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031446.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a.xrp {
+        background: url(https://www.blockchain.bg/img/template/icons/1803031447.png) left 6px center no-repeat;
+        background-size: 20px 20px;
+    }
+
+    section.buy-and-sell>article>aside>a:hover {
+        color: #757575;
+    }
+
+    section.buy-and-sell>article>aside>a#select {
+        color: #757575;
+    }
+
+    section.buy-and-sell>article>aside>div {
+        float: left;
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article>aside>div>p {
+        color: #1a67b2;
+        float: left;
+        margin: 20px 0 0 0;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article>form {
+        float: right;
+        width: 560px;
+    }
+
+    section.buy-and-sell>article>form>h5 {
+        clear: both;
+        color: #1a67b2;
+        float: left;
+        margin: 62px 0 15px 0;
+        padding: 5px 0 7px 0;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article>form>h5>span {
+        background: #1a67b2;
+        border-radius: 50%;
+        color: #f4fafa;
+        margin: 0 10px 0 0;
+        padding: 5px 13px 7px 13px;
+    }
+
+    section.buy-and-sell>article>form>label {
+        float: left;
+        font-size: 0.9em;
+        margin: 0 60px 0 0;
+        width: 238px;
+    }
+
+    section.buy-and-sell>article>form>label[for="amount_in_bgn"] {
+        border: 0;
+        margin: 0;
+    }
+
+    section.buy-and-sell>article>form>label[for="wallet"] {
+        border: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article>form>label[for="phone"] {
+        border: 0;
+        margin: 0;
+    }
+
+    section.buy-and-sell>article>form>label>input {
+        float: left;
+        outline: none;
+        padding: 8px 10px;
+        width: 238px;
+    }
+
+    section.buy-and-sell>article>form>label[for="payment"] {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        width: 560px;
+    }
+
+    section.buy-and-sell>article>form>label[for="payment"]>label>input {
+        margin: 0 5px 0 0;
+    }
+
+    section.buy-and-sell>article>form>label[for="payment"]>.bank {
+        background: url(https://www.blockchain.bg/img/template/1803121335.png) top center no-repeat;
+        float: left;
+        padding: 80px 0px 0px 0px;
+        margin: 0 60px 0 0;
+    }
+
+    section.buy-and-sell>article>form>label[for="payment"]>.cash {
+        background: url(https://www.blockchain.bg/img/template/1803121336.png) top center no-repeat;
+        float: left;
+        padding: 80px 0px 0px 0px;
+    }
+
+    section.buy-and-sell>article>form>label>input[name="wallet"] {
+        width: 536px;
+    }
+
+    section.buy-and-sell>article>form>label>span {
+        clear: both;
+        color: red;
+        float: left;
+        font-size: 0.9em;
+        margin: 0 0 8px 0;
+        width: 100%;
+    }
+
+    section.buy-and-sell>article>form>input[type="submit"] {
+        background: transparent;
+        border: 1px solid #1a67b2;
+        border-radius: 4px;
+        color: #1a67b2;
+        cursor: pointer;
+        float: right;
+        font-size: 0.84em;
+        margin: 30px 0 0 0;
+        outline: none;
+        padding: 12px 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    section.buy-and-sell>article>form>input[type="submit"]:hover {
+        background: #1a67b2;
+        color: white;
+    }
+
+    section.buy-and-sell>article>form>span {
+        float: left;
+        color: red;
+        font-size: 0.9em;
+        margin: 62px 0 0 0;
+    }
+
+    div.trading {
+        cursor: pointer;
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 44%;
+        z-index: 999;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    div.trading>a {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        clear: both;
+        color: white;
+        float: left;
+        margin: 0 0 14px 0;
+        padding: 16px;
+        text-decoration: none;
+        height: 16px;
+        width: 16px;
+    }
+
+    div.trading>a.buy {
+        background: url(https://www.blockchain.bg/img/template/icons/1803121230.png) #1a67b2 left 8px center no-repeat;
+        background-size: 32px 32px;
+    }
+
+    div.trading>a.sell {
+        background: url(https://www.blockchain.bg/img/template/icons/1803121231.png) #1a67b2 left 8px center no-repeat;
+        background-size: 32px 32px;
+    }
+
+    div.trading>a:hover {
+        padding: 13px 16px 19px 56px;
+        text-align: center;
+        width: 64px;
+    }
+
+    div.trading>a>span {
+        display: none;
+    }
+
+    div.trading>a:hover>span {
+        display: block;
+    }
+
+    .tickercontainer {
+        bottom: 0;
+        cursor: default;
+        font-size: 18px;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        height: 57px;
+        width: 100%;
+        z-index: 999;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .mask {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    ul.newsticker {
+        background: #ffd62f;
+        color: white;
+        list-style-type: none;
+        position: relative;
+    }
+
+    ul.newsticker>li {
+        float: left;
+        padding: 17px 25px
+    }
+
+    footer {
+        clear: both;
+        background: #151d2e;
+        color: white;
+        height: 360px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    footer>div {
+        margin: auto;
+        width: 960px;
+    }
+
+    footer>div>.top {
+        float: left;
+        padding: 70px 0 36px 0;
+        width: 100%;
+    }
+
+    footer>div>.top>.about {
+        background: url(https://www.blockchain.bg/img/template/logo_white.png) no-repeat;
+        float: left;
+        padding: 64px 0 0 0;
+        width: 400px;
+    }
+
+    footer>div>.top>ul {
+        float: right;
+        list-style: none;
+        margin: -7px 0 29px 0;
+    }
+
+    footer>div>.top>ul>li {
+        float: left;
+    }
+
+    footer>div>.top>ul>li>a {
+        color: white;
+        float: left;
+        letter-spacing: 1px;
+        margin: 0 0 0 20px;
+        text-decoration: none;
+    }
+
+    footer>div>.top>ul>li>a:hover {
+        color: #444a58;
+    }
+
+    footer>div>.top>p {
+        float: right;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+
+    footer>div>.bottom {
+        border-top: 1px solid #444a58;
+        float: left;
+        font-size: 0.9em;
+        padding: 33px 0 20px 0;
+        width: 100%;
+    }
+
+    footer>div>.bottom>p.left {
+        float: left;
+    }
+
+    footer>div>.bottom>p.right {
+        float: right;
+    }
+
+    footer>div>.bottom>p>a {
+        color: #f9b016;
+        text-decoration: none;
+    }
+
+    footer>div>.bottom>p>a:hover {
+        text-decoration: underline;
+    }
+}
