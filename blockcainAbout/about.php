@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -49,6 +50,9 @@
                 <li class="join"><a href="https://www.blockchain.bg/login">Вход/Регистрация</a></li>
             </ul>
         </nav>
+        <form>
+            <input type = "button" value = "Print" onclick = "window.print()"/>
+        </form
     </div>
 </header>
 <section class="about">
@@ -158,9 +162,13 @@
 
 <script src="https://www.blockchain.bg/js/endlessRiver.js"></script>
 <script>
-    /*updateCurrency();
+    updateCurrency();
+
     function updateCurrency() {
+        console.log(window.location.protocol + '//' + window.location.hostname + "/MyScripts/crypto-currency/blockcainAbout/cripto_currency" +
+            ".php");
         $.ajax({
+
             url: "https://www.blockchain.bg/modules/currency.php",
             method: "GET",
             success: function (result) {
@@ -175,7 +183,7 @@
                 $("#rotator").endlessRiver({speed: 64, pause: true,});
             }
         })
-    }*/
+    }
 </script>
 </body>
 

@@ -42,52 +42,58 @@
 
 <body itemscope itemtype="https://schema.org/WebPage">
 
+
+<!-- ===========================    ACCORDION   =========================================== -->
 <section class="bullets">
     <h4>Търгувай криптовалути бързо и лесно, през BlockChain.bg</h4>
     <ul>
-        <li class="accordion bullet-one" data-accordion="bullet-one">
+        <li class="accordion bullet-one" data-target="bullet-one">
             Удобна и лесна услуга
         </li>
-        <li class="accordion bullet-two" data-accordion="bullet-two">
+        <li class="accordion bullet-two" data-target="bullet-two">
             Бързо изпълнение
         </li>
-        <div id="bullet-one" style="display:none"><p>- без загуба на време за валутни преводи в чужбина и регистрации по борси.</p></div>
-        <div id="bullet-two" style="display:none"><p>- понякога цените варират с над 10% на ден. Бързото изпълнение на сделка ви гарантира
+        <div class="collapse" id="bullet-one" style="display:none"><p>- без загуба на време за валутни преводи в чужбина и регистрации по борси.</p></div>
+        <div class="collapse" id="bullet-two" style="display:none"><p>- понякога цените варират с над 10% на ден. Бързото изпълнение на сделка ви
+                гарантира
                 цената, която желаете.</p></div>
-        <li class="accordion bullet-three" data-accordion="bullet-three">
+        <li class="accordion bullet-three" data-target="bullet-three">
             Заключване на цена
         </li>
-        <li class="accordion bullet-four" data-accordion="bullet-four">
+        <li class="accordion bullet-four" data-target="bullet-four">
             Плащане в брой
         </li>
-        <div id="bullet-three" style="display:none"><p>- предлагаме предварително фиксиране на цена по телефона, за клиенти, с които вече
+        <div class="collapse" id="bullet-three" style="display:none"><p>- предлагаме предварително фиксиране на цена по телефона, за
+                клиенти, с които вече
                 сме извършвали поне една сделка.</p></div>
-        <div id="bullet-four" style="display:none"><p>- можете да платите в брой за сделки до 10 000 лв.</p></div>
-        <li class="accordion bullet-five" data-accordion="bullet-five">
+        <div class="collapse" id="bullet-four" style="display:none"><p>- можете да платите в брой за сделки до 10 000 лв.</p></div>
+        <li class="accordion bullet-five" data-target="bullet-five">
             Възможност<br>за големи сделки
         </li>
-        <li class="accordion bullet-six" data-accordion="bullet-six">
+        <li class="accordion bullet-six" data-target="bullet-six">
             Координация<br>по телефона
         </li>
-        <div id="bullet-five" style="display:none"><p>- услугата е подходяща за големи частни инвеститори, общини, фондове и банки. Сделки
+        <div class="collapse" id="bullet-five" style="display:none"><p>- услугата е подходяща за големи частни инвеститори, общини, фондове и
+                банки. Сделки
                 от големи размери могат да изместят борсовата цена с няколко процента. Нашата услуга решава този проблем.</p></div>
-        <div id="bullet-six" style="display:none"><p>- при необходимост можете да се свържете с нас в делнични дни от 9:00 до 18:00 на +359
+        <div class="collapse" id="bullet-six" style="display:none"><p>- при необходимост можете да се свържете с нас в делнични дни от 9:00 до
+                18:00 на +359
                 893 777 310.</p></div>
     </ul>
     <div style="clear:both"></div>
 </section>
-
+<!--============================================================================================-->
 <script>
     // ======================== ACCORDION =================================== //
     $(document).on("click", ".accordion", function () {
         $(".accordion").removeClass('accordion-active');
-        var selectedElement = $(this).data('accordion');
+        var selectedElement = $(this).data('target');
         var elementId = ("#" + selectedElement);
         if ($(elementId).css('display') === "block") {
-            $(elementId).slideUp();
+            $(elementId).hide();
         } else {
-            $("[id^=bullet-]").slideUp();
-            $(elementId).slideDown();
+            $(".collapse").hide();
+            $(elementId).fadeIn(600);
             $(this).addClass('accordion-active');
         }
     })
